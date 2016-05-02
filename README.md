@@ -3,7 +3,7 @@
 [![Travis-CI Build](https://travis-ci.org/steve-gray/swagger-codegen.svg?branch=master)](https://travis-ci.org/steve-gray/swagger-codegen)
 [![Prod Dependencies](https://david-dm.org/steve-gray/swagger-codegen/status.svg)](https://david-dm.org/steve-gray/swagger-codegen)
 [![Dev Dependencies](https://david-dm.org/steve-gray/swagger-codegen/dev-status.svg)](https://david-dm.org/steve-gray/swagger-codegen#info=devDependencies)
-[![Code Coverage](https://coveralls.io/repos/steve-gray/swagger-codegen/badge.svg?branch=master)](https://coveralls.io/github/steve-gray/swagger-codegen)
+[![Coverage Status](https://coveralls.io/repos/github/steve-gray/swagger-codegen/badge.svg?branch=master)](https://coveralls.io/github/steve-gray/swagger-codegen?branch=master)
 [![npm version](https://badge.fury.io/js/swagger-codegen.svg)](https://badge.fury.io/js/gulp-swagger-codegen)
 
 ![Stats]( https://nodei.co/npm/swagger-codegen.png?downloads=true&downloadRank=true&stars=true)
