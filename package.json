@@ -47,5 +47,8 @@
     "mkdirp": "^0.5.1",
     "rimraf": "^2.5.2",
     "yamljs": "^0.2.7"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
