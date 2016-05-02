@@ -59,6 +59,103 @@ The code generation can be invoked with:
       }
     });
 
+## Templating
+
+### Data Context
+Each template is provided with a collection of objects to use when generating code.
+This collection varies based on the type of template being processed and there are
+some fields common across all types. This object is passed as a map to the template
+engine as the root-object.
+
+### Common Fields
+The following fields are common for all template types:
+  - __model__: The complete parsed Swagger content (JSON/object structure)
+  - __definitionMap__: A name/definition map of all known definitions in Swaggerfile.
+  - __options__: The options object passed into the code-generation function.
+
+### Per-Definition Templates
+Generated per entity/#definition in the Swaggerfile, fields are:
+  - __definition__: The current definition being processed.
+
+### Per-Path Templates
+Fields are:
+  - __groupKey__: The value of the groupBy attribute that this file represents.
+  - __members__: The map of operations from the swaggerfile that link to this file.
+  - __fileName__: The physical file-name this perPath template will use.
+
+
+### Handlebars Template Helper Functions
+#### Registering Your Own
+You can register your own `handlebars` helper functions by adding a top-level configuration
+property called `helpers` and assigning the functions as key-values. The key will be the
+exact block-helper name and the value must be the helper function itself.
+
+#### arrayContains
+Does the array contain an item?
+
+      {{#arrayContains arrayProp value}}
+        // Template if value is in array
+      {{else}}
+        // Template if value is not in array
+      {{/arrayContains}}
+
+#### compare
+Perform a comparison operation.
+
+      {{#compare leftVal operand rightVal}}
+        // Template if leftVal op rightVal true
+      {{else}}
+        // False template
+      {{/compare}}
+
+Supported operands are ==, ===, !=, >, >=, <, <= and typeof
+
+#### lowercase
+Converts a block to lowercase.
+
+    {{#lowercase}}MAKE ME LOWERCASE{{/lowercase}}
+
+#### lowerFirst
+Makes the first character of a block lowercase, but leaves the rest
+of the block untouched.
+
+    {{#lowerFirst}}MAKES FIRST M LOWERCASE{{/lowerFirst}}
+
+### property
+Property name complication helper.
+
+    {{#property someProp "property-name-with-bad-characters" "resultName"}}
+      This scope will be `someProp` but with an extra sub-property of resultName
+    {{else}
+      This scope will be returned if property-name-with-bad-characters does not exist
+    {[/property
+
+This is used primarily because handlebars does not natively seem to permit invalid characters
+in variable names. Some of the extended swaggerfile attributes are prefixed with x- and so
+to reason about them in templates, you'll need this.
+
+#### uppercase
+Converts a block to uppercase.
+
+    {{#uppercase}}i want to be tall{{/uppercase}}
+
+#### upperFirst
+Makes the first character of a block uppercas, but leaves the rest
+of the block untouched.
+
+    {{#upperFirst}}mAKES THE FIRST m UPPERCASE{{/upperFirst}}
+
+#### withDef
+Creates a child scope using the specified definition as the context:
+
+    {{#withDef defReferencePath}}
+      // Generate a sub-section that relates to a definition.
+    {{/withDef}}
+
+This allows creation of cross-entity relations/nesting, and is shown
+being used in the included ES6 definition template.
+
+
 ## Additional options 
 In addition to the `swagger`, `perPath` and `perDefinition` options, you 
 can pass through the following values. All of the below have default
