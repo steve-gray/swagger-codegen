@@ -1,0 +1,32 @@
+{
+  "name": "swagger-codegen",
+  "version": "0.0.1",
+  "description": "Code generation for Swagger based API's.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve-gray/swagger-codegen.git"
+  },
+  "keywords": [
+    "swagger",
+    "code",
+    "generation",
+    "es6",
+    "rest"
+  ],
+  "author": "Steve Gray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steve-gray/swagger-codegen/issues"
+  },
+  "homepage": "https://github.com/steve-gray/swagger-codegen#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "defaults-deep": "^0.2.3",
+    "handlebars": "^4.0.5",
+    "lodash": "^4.11.1"
+  }
+}
