@@ -1,0 +1,37 @@
+{
+  "build": {
+    "documentation": {
+      "outputPath": "./dist/documentation",
+      "paths": [
+        "./src/"
+      ],
+      "testType": "mocha",
+      "testRoot": "./tests",
+      "undocumentedIdentifiers": true,
+      "unexportedIdentifiers": true
+    },
+    "linting": {
+      "formatter": "stylish",
+      "paths": [
+        "./src/**/*.js",
+        "./tasks/**/*.js",
+        "./tests/**/*.js",
+        "!./tests/**/templates/**/*.*",
+        "!./tests/**/reference/**/*.*",
+        "!./tests/**/output/**/*.*"
+      ]
+    },
+    "testing": {
+      "coverage": {
+        "enforceThreshold": 90,
+        "includeUntested": true,
+        "instrumentPath": ["./src/**/*.js"],
+        "outputPath": "./dist/coverage",
+        "tempPath": "./dist/coverage-temp"
+      },
+      "inputs": [
+        "./tests/**/*.mocha.js"
+      ]
+    }
+  }
+}

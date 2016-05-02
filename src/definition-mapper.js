@@ -14,7 +14,7 @@ function mapDefinitionsFromModel(model) {
   /* istanbul ignore else */
   if (model && model.definitions) {
     debug('Parsing %s definitions', Object.keys(model.definitions).length);
-    for (const definitionName in model.definitions) {
+    for (const definitionName of Object.keys(model.definitions)) {
       debug('  Reading definition for %s', definitionName);
       const definitionKey = util.format('#/definitions/%s', definitionName);
       const currentDef = model.definitions[definitionName];
@@ -25,6 +25,6 @@ function mapDefinitionsFromModel(model) {
   }
 
   return definitionMap;
-};
+}
 
 module.exports = mapDefinitionsFromModel;

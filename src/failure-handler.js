@@ -1,4 +1,6 @@
 'use strict';
+/* istanbul ignore next */
+/* eslint-disable no-console */
 
 /**
  * Handle failures in the application by terminating.
@@ -8,4 +10,4 @@ module.exports = (err) => {
   console.log(err);
   console.log(err.stack);
   process.exit(-1);
-}
+};

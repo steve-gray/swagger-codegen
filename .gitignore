@@ -35,3 +35,9 @@ node_modules
 # Distribution files
 dist
 
+# Test Case Output
+**/cases/**/output
+
+# OS Specific junk
+.DS_Store
+thumbs.db

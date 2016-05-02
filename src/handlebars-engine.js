@@ -13,7 +13,7 @@ function handlebarsEngine(taskOptions) {
 
   /* istanbul ignore else */
   if (taskOptions.helpers) {
-    for (const helper in taskOptions.helpers) {
+    for (const helper of Object.keys(taskOptions.helpers)) {
       debug('  Registering helper: %s', helper);
       handlebars.registerHelper(helper, taskOptions.helpers[helper]);
     }

@@ -4,7 +4,7 @@ const debug = require('debug')('swagger-codegen:file-template-loader');
 const fs = require('fs');
 
 /**
- * The FileTemplateLoader reads template content from 
+ * The FileTemplateLoader reads template content from filesystem files.
  */
 class FileTemplateLoader {
   /**

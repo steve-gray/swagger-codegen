@@ -30,10 +30,6 @@ function arrayContainsItem(array, value, options) {
  * @returns {string}                  - Result
  */
 function compareValues(lvalue, operator, rvalue, options) {
-  /* istanbul ignore if */
-  if (arguments.length !== 4) {
-    throw new Error('The compare helper requires 3 parameters');
-  }
   const operators = {
     '==': function compareEqual(l, r) { return l === r; },
     '===': function compareIdentical(l, r) { return l === r; },

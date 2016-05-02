@@ -8,4 +8,7 @@ node_js:
 script: gulp
 
 after_success:
-  - cat ./docs/code-coverage/lcov.info | node node_modules/coveralls/bin/coveralls.js
+  - 
+  
+  
+  
