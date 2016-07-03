@@ -45,7 +45,7 @@
     "gulp-istanbul": "^0.10.4",
     "gulp-mocha": "^2.2.0",
     "mkdirp": "^0.5.1",
-    "rimraf": "^2.5.2",
+    "rimraf": "^2.5.3",
     "yamljs": "^0.2.7"
   },
   "publishConfig": {
