@@ -95,7 +95,7 @@ function generateCode(taskOptions) {
           debug('      Path: %s', pathString);
           const pathDef = model.paths[pathString];
           let groupKey = pathDef[options.groupBy];
-          pathDef.pathString = path;
+          pathDef.pathString = pathString;
 
           // Iterate through the allowed operations
           for (const operationString of _.intersection(Object.keys(pathDef), options.operations)) {
