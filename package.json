@@ -26,7 +26,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "defaults-deep": "^0.2.3",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.0.6",
     "lodash": "^4.11.1"
   },
   "devDependencies": {
