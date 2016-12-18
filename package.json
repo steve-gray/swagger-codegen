@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/steve-gray/swagger-codegen#readme",
   "dependencies": {
-    "debug": "^2.2.0",
+    "debug": "^2.4.5",
     "defaults-deep": "^0.2.3",
     "handlebars": "^4.0.5",
     "lodash": "^4.11.1"
