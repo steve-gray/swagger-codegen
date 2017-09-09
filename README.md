@@ -53,7 +53,7 @@ The code generation can be invoked with:
           groupBy: 'x-swagger-router-controller',
           target: './controllers',
           extension: '.js', // Default
-          operations: ['get', 'put', 'post', 'delete'], // Default
+          operations: ['get', 'patch', 'put', 'post', 'delete'], // Default
           /* Add your own options for templates here */
         }
       }

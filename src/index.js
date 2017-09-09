@@ -48,7 +48,7 @@ function generateCode(taskOptions) {
         debug('    Iterating template: %s', templateFile);
         const options = defaults(config.perDefinition[templateFile], {
           extension: '.js',
-          operations: ['get', 'put', 'post', 'delete'],
+          operations: ['get', 'patch', 'put', 'post', 'delete'],
         });
         const template = taskOptions.templateLoader(templateEngine)
           .loadTemplate(templateFile, taskOptions.textEncoding);
@@ -83,7 +83,7 @@ function generateCode(taskOptions) {
         debug('    Processing template: %s', templateFile);
         const options = defaults(config.perPath[templateFile], {
           extension: '.js',
-          operations: ['get', 'put', 'post', 'delete'],
+          operations: ['get', 'put', 'post', 'patch', 'delete'],
         });
         const template = taskOptions.templateLoader(templateEngine)
           .loadTemplate(templateFile, taskOptions.textEncoding);

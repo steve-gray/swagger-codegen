@@ -73,6 +73,21 @@ paths:
         "404":
           x-gulp-swagger-codegen-outcome: notFound
           description: The waffle was not found
+    patch:
+      operationId: updateWaffleById
+      summary: Update a single waffle type by id.
+      parameters:
+        - name: data
+          in: body
+          schema:
+            $ref: "#/definitions/Waffle"
+      responses:
+        "200":
+          x-gulp-swagger-codegen-outcome: success
+          description: Updated waffle.
+        "404":
+          x-gulp-swagger-codegen-outcome: notFound
+          description: The waffle was not found
 
   /waffles/{id}/ingredients:
     x-swagger-router-controller: waffles
