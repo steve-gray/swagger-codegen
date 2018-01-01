@@ -2,10 +2,6 @@
 
 [![Prod Dependencies](https://david-dm.org/fastbean-au/swagger-codegen/status.svg)](https://david-dm.org/fastbean-au/swagger-codegen)
 [![Dev Dependencies](https://david-dm.org/fasatbean-au/swagger-codegen/dev-status.svg)](https://david-dm.org/fastbean-au/swagger-codegen#info=devDependencies)
-[![npm version](https://badge.fury.io/js/swagger-codegen.svg)](https://badge.fury.io/js/gulp-swagger-codegen)
-
-![Stats]( https://nodei.co/npm/swagger-codegen.png?downloads=true&downloadRank=true&stars=true)
-![Downloads](https://nodei.co/npm-dl/swagger-codegen.png?height=2)
 
 Code generation for Swagger based API's. Supports NodeJS 4.x+.
 
