@@ -1,6 +1,6 @@
 {
   "name": "swagger-codegen",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Code generation for Swagger based API's.",
   "main": "./src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steve-gray/swagger-codegen.git"
+    "url": "git+https://github.com/fastbean-au/swagger-codegen.git"
   },
   "keywords": [
     "swagger",
@@ -17,12 +17,15 @@
     "es6",
     "rest"
   ],
-  "author": "Steve Gray",
+  "contributors": [
+    "Steve Gray",
+    "Sean Miller <fastbeanau@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steve-gray/swagger-codegen/issues"
+    "url": "https://github.com/fastbean-au/swagger-codegen/issues"
   },
-  "homepage": "https://github.com/steve-gray/swagger-codegen#readme",
+  "homepage": "https://github.com/fastbean-au/swagger-codegen#readme",
   "dependencies": {
     "debug": "^2.2.0",
     "defaults-deep": "^0.2.3",

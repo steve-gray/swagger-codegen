@@ -1,13 +1,7 @@
 # swagger-codegen
 
-[![Travis-CI Build](https://travis-ci.org/steve-gray/swagger-codegen.svg?branch=master)](https://travis-ci.org/steve-gray/swagger-codegen)
-[![Prod Dependencies](https://david-dm.org/steve-gray/swagger-codegen/status.svg)](https://david-dm.org/steve-gray/swagger-codegen)
-[![Dev Dependencies](https://david-dm.org/steve-gray/swagger-codegen/dev-status.svg)](https://david-dm.org/steve-gray/swagger-codegen#info=devDependencies)
-[![Coverage Status](https://coveralls.io/repos/github/steve-gray/swagger-codegen/badge.svg?branch=master)](https://coveralls.io/github/steve-gray/swagger-codegen?branch=master)
-[![npm version](https://badge.fury.io/js/swagger-codegen.svg)](https://badge.fury.io/js/gulp-swagger-codegen)
-
-![Stats]( https://nodei.co/npm/swagger-codegen.png?downloads=true&downloadRank=true&stars=true)
-![Downloads](https://nodei.co/npm-dl/swagger-codegen.png?height=2)
+[![Prod Dependencies](https://david-dm.org/fastbean-au/swagger-codegen/status.svg)](https://david-dm.org/fastbean-au/swagger-codegen)
+[![Dev Dependencies](https://david-dm.org/fasatbean-au/swagger-codegen/dev-status.svg)](https://david-dm.org/fastbean-au/swagger-codegen#info=devDependencies)
 
 Code generation for Swagger based API's. Supports NodeJS 4.x+.
 
@@ -18,6 +12,13 @@ and per-entity/definition.
 
 The code is intended to be as pluggable as reasonably practical, and pull requests
 to support additional features are _very, __very__ welcome_.
+
+## Status
+This repository/package has been forked from [steve-gray/swagger-codegen](https://github.com/steve-gray/swagger-codegen)
+as it was not being maintained. The automated build pipelines have not yet been put in place, and
+dependencies are sorely out of date. At some point this may be rectified...until then, use cautiously.
+
+To use: follow the [instructions found here.](https://coderwall.com/p/q_gh-w/fork-and-patch-npm-moduels-hosted-on-github)
 
 ## Gulp Task
 This module is leveraged in the [gulp-swagger-codegen](https://www.npmjs.com/package/gulp-swagger-codegen)
@@ -53,7 +54,7 @@ The code generation can be invoked with:
           groupBy: 'x-swagger-router-controller',
           target: './controllers',
           extension: '.js', // Default
-          operations: ['get', 'put', 'post', 'delete'], // Default
+          operations: ['get', 'patch', 'put', 'post', 'delete'], // Default
           /* Add your own options for templates here */
         }
       }
